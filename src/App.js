@@ -7,13 +7,14 @@ import Dashboard from './pages/Dashboard'
 import Profile from './pages/profile'
 import Add from './pages/Add'
 import MyPost from './pages/MyPost'
+import { Redirect } from 'react-router-dom'
 
 
 const App = () => {
 	return (
 		<div>
 			<BrowserRouter>
-			
+				<Redirect from="/" to="/login" />
 				<Route path="/login" exact component={Login} />
 				<Route path="/register" exact component={Register} />
 				<Route path="/dashboard" exact component={Dashboard} />
